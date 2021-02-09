@@ -10,20 +10,33 @@ if fileinfo('loader.sce') <> [] then
   mdelete('loader.sce');
 end
 // ------------------------------------------------------
-if fileinfo('libtest_toolbox.so') <> [] then
-  mdelete('libtest_toolbox.so');
+if fileinfo('Makelib') <> [] then
+  unix_s('make -f Makelib clean');
+  mdelete('Makelib');
 end
 // ------------------------------------------------------
-if fileinfo('libtest_toolbox.cpp') <> [] then
-  mdelete('libtest_toolbox.cpp');
+if isdir('Debug') then
+  rmdir('Debug','s');
 end
 // ------------------------------------------------------
-if fileinfo('libtest_toolbox.hxx') <> [] then
-  mdelete('libtest_toolbox.hxx');
+if isdir('Release') then
+  rmdir('Release','s');
 end
 // ------------------------------------------------------
-if fileinfo('libtest_toolbox.h') <> [] then
-  mdelete('libtest_toolbox.h');
+if fileinfo('test_toolbox.dll') <> [] then
+  mdelete('test_toolbox.dll');
+end
+// ------------------------------------------------------
+if fileinfo('test_toolbox.cpp') <> [] then
+  mdelete('test_toolbox.cpp');
+end
+// ------------------------------------------------------
+if fileinfo('test_toolbox.hxx') <> [] then
+  mdelete('test_toolbox.hxx');
+end
+// ------------------------------------------------------
+if fileinfo('test_toolbox.h') <> [] then
+  mdelete('test_toolbox.h');
 end
 // ------------------------------------------------------
 chdir(curdir);

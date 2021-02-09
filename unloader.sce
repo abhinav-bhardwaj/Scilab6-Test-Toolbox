@@ -4,7 +4,7 @@
 oldmode = mode();      mode(-1);
 oldlines = lines()(2); lines(0);
 try
-    fileQuit = get_absolute_file_path("unloader.sce") + "etc/" + "test_toolbox.quit";
+    fileQuit = get_absolute_file_path("unloader.sce") + "etc\" + "test_toolbox.quit";
     if isfile(fileQuit) then
         exec(fileQuit);
     end

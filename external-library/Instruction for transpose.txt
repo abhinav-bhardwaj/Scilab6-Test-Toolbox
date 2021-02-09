@@ -1,0 +1,15 @@
+After installing MinGW toolbox on Scilab
+
+Go to the Directory Scilab6-Test-Toolbox
+
+Commands to run on Scilab are as follows :
+
+exec builder.sce
+
+exec loader.sce
+
+A = [1,2,3;4,5,6;7,8,9;10,11,12] 
+
+A = int32(A)
+
+y = transpose(A)

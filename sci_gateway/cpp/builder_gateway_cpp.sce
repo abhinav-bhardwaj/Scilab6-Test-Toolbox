@@ -19,12 +19,12 @@ path_builder = get_absolute_file_path('builder_gateway_cpp.sce');
 
 Function_Names = [
         
-        "multiply","sci_multiply", "csci6";
+        "transpose","sci_transpose", "csci6";
     ];
 
 //Name of all the files to be compiled
 Files = [
-				"sci_multiply.cpp"
+				"sci_transpose.cpp"
 				]
 
 
@@ -40,7 +40,7 @@ if getos()=="Windows" then
     inc_base_dir = third_dir + filesep() + 'windows' + filesep() + 'include';
     C_Flags=['-D__USE_DEPRECATED_STACK_FUNCTIONS__  -I -w '+path_builder+' '+ '-I '+inc_base_dir+' ']   
     Linker_Flag  = "";
-		libs  = [lib_base_dir+"libmul"];
+		libs  = [lib_base_dir+"libtranspose"];
 
 elseif getos()=="Darwin" then //Mac
 	third_dir = path_builder+filesep()+'..'+filesep()+'..'+filesep()+'thirdparty';

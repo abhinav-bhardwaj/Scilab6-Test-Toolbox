@@ -1,0 +1,4 @@
+LIBRARY    test_toolbox.dll
+EXPORTS
+	sci_transpose
+	test_toolbox
